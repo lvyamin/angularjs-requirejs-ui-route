@@ -1,6 +1,10 @@
-<h2>
+<h2 style="margin-bottom:10px">
 	{{title}}
 </h2>
-
-
-
+<div ng-show="loading">加载中...</div>
+<div class="list-group"  ng-show="!loading" ng-repeat="info in githubData">
+	<a ng-class="{'list-group-item':true,'active':$index==0?true:false}" ng-href="{{info.actor.url}}">
+		<img ng-src="{{info.actor.avatar_url}}" width="40">
+		{{info.actor.login}} 
+	</a>
+</div>

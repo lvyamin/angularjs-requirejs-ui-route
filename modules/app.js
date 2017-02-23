@@ -148,6 +148,24 @@ define([
 					}
 				}
 			}
+		}).state("home.menu.xhr",{
+			url:"/xhr",
+			views:{
+				"content@home":{
+					templateUrl:"templates/page/xhr.html",
+					controller:"xhrCtrl",
+					resolve:{
+						loadCtrl: ["$q",function($q) {
+					        var deferred = $q.defer();
+					        //异步加载controller／directive/filter/service
+					        require([
+					            'controller/page/xhrCtrl'
+					        ], function() { deferred.resolve(); });
+					        return deferred.promise;
+					    }]
+					}
+				}
+			}
 		})
 
 	})
