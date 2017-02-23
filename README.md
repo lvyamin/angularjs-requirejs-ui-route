@@ -1,4 +1,4 @@
-## 一套通过Requirejs整合Angularjs+Ui-route的解决方案
+## 一套通过Requirejs整合Angularjs+Ui-route的解决方案-folvyamin
 
 整合了angularjs和requirejs，解决了组件之间相互依赖，以及按需加载的问题，大大提高了运行效率，以及工作效率
 
